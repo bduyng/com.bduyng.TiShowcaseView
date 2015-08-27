@@ -63,14 +63,23 @@ function setWindowImage(callback) {
 	});
 }
 
+// convert dp to pixel.
+function dpToPx(dp) {
+	return ( parseInt(dp) * (Titanium.Platform.displayCaps.dpi / 160));
+}
+
+// convert pixel to dp.
+function pxToDp(px) {
+	return ( parseInt(px) / (Titanium.Platform.displayCaps.dpi / 160));
+}
+
 function generateHighlighter(_args) {
 	var target = _args.target;
-
 	var highlighterBlob = _args.windowImage.imageAsCropped({
-		x : target.rect.x - $.padding / 2,
-		y : target.rect.y - $.padding / 2,
-		width : target.rect.width + $.padding,
-		height : target.rect.height + $.padding,
+		x : dpToPx(target.rect.x - $.padding / 2),
+		y : dpToPx(target.rect.y - $.padding / 2),
+		width : dpToPx(target.rect.width + $.padding),
+		height : dpToPx(target.rect.height + $.padding),
 	});
 
 	var highlighter = Ti.UI.createImageView({
@@ -79,8 +88,8 @@ function generateHighlighter(_args) {
 			x : target.rect.x + target.rect.width / 2,
 			y : target.rect.y + target.rect.height / 2,
 		},
-		width : highlighterBlob.width,
-		height : highlighterBlob.height,
+		width : pxToDp(highlighterBlob.width),
+		height : pxToDp(highlighterBlob.height),
 		image : highlighterBlob,
 		_description : _args.description
 	});

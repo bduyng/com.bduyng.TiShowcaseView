@@ -1,0 +1,15 @@
+<Alloy>
+	<Window class="container">
+		<Button id="btn1">Button 1</Button>
+		<Button id="btn2">Button 2</Button>
+		<Button id="btn3">Button 3</Button>
+		<Button id="btn4">Button 4</Button>
+		<Button id="btn5">Button 5</Button>
+		<Button id="btn6">Button 6</Button>
+		<Button id="btn7">Button 7</Button>
+		<Button id="btn8">Button 8</Button>
+		<Button id="btn9">Button 9</Button>
+	</Window>
+
+	<Widget id="showcaseView" src="com.bduyng.TiShowcaseView"></Widget>
+</Alloy>
