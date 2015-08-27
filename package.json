@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "appc-npm": {
+    "config": {
+      "com.bduyng.TiShowcaseView": "1.0.0"
+    },
+    "target": {
+      "alloy": "app/widgets/com.bduyng.TiShowcaseView"
+    },
+    "ignore": [
+      "package.json"
+    ]
+  },
+  "description": "An Alloy widget to create welcome pages like AirBnB application.",
+  "author": "Duy Bao Nguyen",
+  "license": "Apache License, Version 2.0",
+  "name": "com.bduyng.TiShowcaseView",
+  "keywords": [
+    "alloy",
+    "alloy-widget",
+    "appc-npm",
+    "appcelerator",
+    "intro",
+    "tutorial",
+    "welcome",
+    "showcase"
+  ],
+  "scripts": {
+    "postinstall": "node ./appc-npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bduyng/com.bduyng.TiShowcaseView"
+  },
+  "bugs": {
+    "url": "https://github.com/bduyng/com.bduyng.TiShowcaseView/issues"
+  },
+  "homepage": "github.com/bduyng/com.bduyng.TiShowcaseView#readme"
+}

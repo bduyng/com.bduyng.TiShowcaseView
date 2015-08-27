@@ -1,0 +1,14 @@
+".container" : {
+	backgroundColor : 'transparent'
+}
+".background" : {
+	backgroundColor : '#77000000'
+}
+".description": {
+	color: '#fff',
+	font: {
+		fontSize: 18,
+	},
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}

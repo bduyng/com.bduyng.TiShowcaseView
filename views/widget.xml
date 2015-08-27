@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="container" class="container">
+		<View id="background" class="background"></View>
+		<Label id="description" class="description"></Label>
+		<Button id="next" class="next" onClick="next">GOT IT</Button>
+	</Window>
+</Alloy>
