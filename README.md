@@ -5,14 +5,14 @@ An [Alloy](http://appcelerator.com/alloy) [Widget](http://docs.appcelerator.com/
 * Source code: [https://github.com/bduyng/com.bduyng.TiShowcaseView/tree/master](https://github.com/bduyng/com.bduyng.TiShowcaseView/tree/master)
 * Test app: [https://github.com/bduyng/com.bduyng.TiShowcaseView/tree/test](https://github.com/bduyng/com.bduyng.TiShowcaseView/tree/test)
 
-<!-- ### Screenshot
+### Screenshot
 ![Screenshot](https://github.com/bduyng/com.bduyng.TiShowcaseView/blob/test/demo.gif?raw=true)
 
 ## Get it [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/com.bduyng.TiShowcaseView)
 
 Install via [gitTio](http://gitt.io/component/com.bduyng.TiShowcaseView):
 
-	$ gittio install com.bduyng.TiShowcaseView -->
+	$ gittio install com.bduyng.TiShowcaseView
 
 Or download a [release](https://github.com/bduyng/com.bduyng.TiShowcaseView/releases), extract it to your app's `app/widgets/com.bduyng.TiShowcaseView` folder and add the dependency to your `config.json`:
 
