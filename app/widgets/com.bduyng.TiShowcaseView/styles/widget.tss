@@ -4,11 +4,18 @@
 ".background" : {
 	backgroundColor : '#77000000'
 }
+".next" : {
+	width : 80,
+	height : 30,
+	color : '#E74C3C',
+	backgroundColor : '#FBFCFC'
+}
 ".description": {
 	color: '#fff',
 	font: {
 		fontSize: 18,
 	},
 	height: Ti.UI.SIZE,
-	width: Ti.UI.SIZE
+	width: '80%',
+	textAlign : 'center'
 }

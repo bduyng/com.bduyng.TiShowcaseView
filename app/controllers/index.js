@@ -1,9 +1,16 @@
 (function () {
 	var _targets = [];
+
+	var dummyDescriptions = [
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+		'Duis aute irure dolor in reprehenderit in voluptate velit esse.'
+	]
+
 	for (var i = 0, max = 9; i < max; i++) {
 		_targets.push({
 			point : $['btn' + (i + 1)],
-			description : "Description " + (i + 1)
+			description : dummyDescriptions[i % 3]
 		})
 	}
 

@@ -11,5 +11,5 @@
 		<Button id="btn9">Button 9</Button>
 	</Window>
 
-	<Widget id="showcaseView" src="com.bduyng.TiShowcaseView"></Widget>
+	<Widget id="showcaseView" dimColor='#992C3E50' src="com.bduyng.TiShowcaseView"></Widget>
 </Alloy>
