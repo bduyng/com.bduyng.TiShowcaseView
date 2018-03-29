@@ -1,17 +1,15 @@
 
 (function constructor(args) {
-    $.padding = args.padding || 20; // padding of highligher
+    $.padding = args.padding || 20; // padding of highlighter
     $.margin = args.margin || 100; // margin between description and highlighter
 
     $.borderRadius = args.borderRadius || 80;
 
     if (args.dimColor) {
-        console.log(args.dimColor);
         $.background.backgroundColor = args.dimColor;
     }
 
     $.lighterDimColor = '#33FFFFFF';
-
 
     $.isOpening = false;
 
@@ -111,8 +109,21 @@ function prepareForGeneratingHighlighter(_args) {
 
 }
 
+/**
+ * Recursively get current window by traversing the parents
+ * @param target
+ * @returns {*}
+ */
+function getAdam(target) {
+    if (target.parent) {
+        return getAdam(target.parent);
+    } else {
+        return target;
+    }
+}
+
 function generateHighlighter_(target, highlighterBlob, description) {
-    // highligh by circle shape
+    // highlight by circle shape
     var highlighter = Ti.UI.createImageView({
         opacity : 1,
         width : pxToDp(highlighterBlob.width),
@@ -125,19 +136,23 @@ function generateHighlighter_(target, highlighterBlob, description) {
 
     // generate border view
     var lengthOfSize = pxToDp(highlighterBlob.width) + $.borderRadius;
+    var parent = target.parent,
+        win = getAdam(parent),
+        center = {
+	        x : target.rect.x + target.rect.width / 2,
+	        y : target.rect.y + target.rect.height / 2,
+        };
+
     var borderView = Ti.UI.createView({
         opacity : 0,
-        center : {
-            x : target.rect.x + target.rect.width / 2,
-            y : target.rect.y + target.rect.height / 2,
-        },
+        center : parent !== win ? parent.convertPointToView(center, win) : center,
         width : lengthOfSize,
         height : lengthOfSize,
         borderRadius : lengthOfSize / 2,
         backgroundColor : $.lighterDimColor,
 
         _description : description,
-    })
+    });
 
     borderView.add(highlighter);
 
@@ -153,7 +168,7 @@ function resetDescription(highlighter) {
     $.description.center = {
         x : Titanium.Platform.displayCaps.platformWidth / 2,
         y : highlighter.rect.y + (highlighter.height + $.margin) * isBelow
-    }
+    };
 
     relocateNextBtn($.description);
 
